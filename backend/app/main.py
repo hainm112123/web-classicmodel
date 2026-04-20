@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import customers, dashboard, lookups, orders, reports
+from app.api import customers, dashboard, lookups, orders, reports, chat
 from app.core.config import settings
 
 
@@ -20,6 +20,7 @@ app.include_router(orders.router, prefix="/api")
 app.include_router(dashboard.router, prefix="/api")
 app.include_router(reports.router, prefix="/api")
 app.include_router(lookups.router, prefix="/api")
+app.include_router(chat.router, prefix="/api")
 
 
 @app.get("/health")

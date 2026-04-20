@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import { Chatbot } from "./Chatbot";
 
 const navItems = [
   { to: "/", label: "Dashboard" },
@@ -31,6 +32,7 @@ export function Layout() {
       <main className="content">
         <Outlet />
       </main>
+      <Chatbot />
     </div>
   );
 }
